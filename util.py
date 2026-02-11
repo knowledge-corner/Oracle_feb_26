@@ -24,8 +24,17 @@ def decot(func_obj) :
 def func():
     print("This is the original function")
 
+# defining decorator to check if the parameter passed to the function is an int or not
+def is_int(func_obj):
+    def check(num) :
+        if type(num) == int:
+            return func_obj(num)  
+        else:
+            return "Invalid input, please enter an integer"
+    return check
 
 
+@is_int
 def factorial(n):
     if n == 0 or n == 1:
         return 1
@@ -35,11 +44,13 @@ def factorial(n):
             fact *= i
         return fact
 
+@is_int
 def even_odd(n):
     if n % 2 == 0:
         return "Even"
     else:
         return "Odd"
-    
+
+@is_int 
 def addition(a, b):
     return a + b

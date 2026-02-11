@@ -1,6 +1,5 @@
 import util
 
-# number = "abcd"
-# print(util.factorial(number))
-
-util.func()
+number = 10
+print(util.factorial(number))
+print(util.even_odd(number))
