@@ -1,0 +1,13 @@
+1. pip install pyinstaller - one time process
+
+2. Open Terminal - Namvigate to the script folder - cd path\to\your\script
+
+3. Creates exe file - pyinstaller --onefile your_script.py
+
+Find Your .exe in dist folder inside your script’s directory.
+
+Alternate commands to build your exe - 
+
+- Hide the console window (for GUI apps) - pyinstaller --onefile --windowed your_script.py
+- Add an icon: pyinstaller --onefile --icon=your_icon.ico your_script.py
+
